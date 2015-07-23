@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<title>My Anagram Checker</title>
+  	<script src="script.js"></script>
+  </head>
+  <body style="padding-left: 20px">
+    <h2>Anagram Checker</h2>
+    <form class="form-inline">
+      <div class="form-group">
+        <input type="text" class="form-control" id="string1Input" placeholder="String 1">
+        <input type="text" class="form-control" id="string2Input" placeholder="String 2">
+      </div>
+      <button type="button" class="btn btn-default" onClick="anagramChecker(document.getElementById('string1Input').value,document.getElementById('string2Input').value)">Anagram?</button>
+    </form>
+    <h3><span id="successLabel" class="label label-success" style="display:none">Yes</span></h3>
+    <h3><span id="failureLabel" class="label label-danger" style="display:none">No</span></h3>
+    <script>
+      console.log("TESTS: Must be true");
+		  console.log(isAnagram("anagram", "nagaram"));
+      console.log(isAnagram("123", "123"));
+      console.log(isAnagram("2 1 ", "1 2 "));
+      console.log(isAnagram("^#$", "$#^"));
+      console.log("TESTS: Must be false");
+      console.log(isAnagram(" 12", "12"));
+      console.log(isAnagram("askjfkasjfklasjffasfasf", "11254ykzxfkajfaj2"));
+  	</script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+  </body>
+</html>
